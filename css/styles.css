@@ -18,15 +18,16 @@ path {
 
 h1{
     color: rgb(138, 237, 239);
-    font-size: 3.2rem;
-    font-weight: normal;
+
+    font-size: 3.5rem;
+    font-weight: 600;
     letter-spacing: 1px;
 
 }
 
 .header {
     align-self: center;
-    margin: 0;
+    margin-left: 0.5rem;
     padding: 0;
 
 }
