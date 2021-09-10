@@ -11,18 +11,54 @@ svg {
 
 path {
     stroke: #8AEDEF;
-    stroke-width: 6px;
+    stroke-width: 3px;
     stroke-linecap: round;
     fill: none;
+}
+@media screen and (min-width: 450px){
+    path {
+        stroke: #8AEDEF;
+        stroke-width: 4px;
+        stroke-linecap: round;
+        fill: none;
+    }
+}
+@media screen and (min-width: 730px){
+    path {
+        stroke: #8AEDEF;
+        stroke-width: 6px;
+        stroke-linecap: round;
+        fill: none;
+    }
 }
 
 h1{
     color: rgb(138, 237, 239);
 
-    font-size: 3.5rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -1px;
 
+}
+
+@media screen and (min-width: 450px){
+    h1{
+
+        font-size: 3rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+
+    }
+}
+
+@media screen and (min-width: 730px){
+    h1{
+
+        font-size: 3.5rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+    }
 }
 
 .header {
@@ -37,6 +73,7 @@ h1{
     margin-right: auto;
 
     max-width: 800px;
+    min-width: 120px;
     background-color: #595959;
     border-radius: 5px;
     padding: 0 1rem 0 1rem;

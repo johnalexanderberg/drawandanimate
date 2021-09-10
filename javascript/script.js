@@ -1,7 +1,7 @@
-let xs = [];
-let w = window.innerWidth;
-for (let i = 0; i <= w; i++) {
-xs.push(i)
+
+
+function windowInnerWidth() {
+    return window.innerWidth;
 }
 
 
@@ -10,19 +10,22 @@ const amplitude = 40;
 const offset = 50;
 let t = 0;
 
-function limiter(value) {
-
-    if (value > amplitude) {
-        return amplitude
-    } else return value
-}
-
 
 function animate () {
 
+
+
+    let xs = [];
+    let animationWidth = windowInnerWidth();
+
+    for (let i = 0; i <= animationWidth; i++) {
+        xs.push(i)
+    }
+
+
     let points = xs.map(x => {
 
-        let y = offset + amplitude*(Math.sin(x / 80)) * Math.sin(((x+t) / 20));
+        let y = offset + amplitude*(Math.sin((x / animationWidth/3 * 170))) * Math.sin(((t+x/3) / 20));
         return [x,y]
     })
 
@@ -34,6 +37,6 @@ function animate () {
 
     t += 0.5;
     requestAnimationFrame(animate)
-};
+}
 
 animate();
