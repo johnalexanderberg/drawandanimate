@@ -1,7 +1,7 @@
 
 
 function windowInnerWidth() {
-    return window.innerWidth;
+    return window.innerWidth*0.8;
 }
 
 
