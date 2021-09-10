@@ -22,7 +22,7 @@ function animate () {
 
     let points = xs.map(x => {
 
-        let y = offset + amplitude * (Math.sin(x / 80)) * Math.sin(((x+t) / 20));
+        let y = offset + amplitude*(Math.sin(x / 80)) * Math.sin(((x+t) / 20));
         return [x,y]
     })
 
