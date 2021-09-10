@@ -1,0 +1,27 @@
+body{
+    font-family: 'Urbanist', sans-serif;
+}
+
+svg {
+    width: 500px;
+    height: 200px;
+}
+
+path {
+    stroke: dodgerblue;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    fill: none;
+}
+
+h1{
+    color: dodgerblue;
+    font-size: 4rem;
+    letter-spacing: 1px;
+}
+
+.header {
+    display: inline;
+    justify-items: center;
+
+}
