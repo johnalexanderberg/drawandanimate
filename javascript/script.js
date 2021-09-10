@@ -11,6 +11,15 @@ const offset = 50;
 let t = 0;
 
 
+function ampFactor(amplitude) {
+
+    if (window.innerWidth < 420)
+        return 15;
+
+    else return amplitude;
+}
+
+
 function animate () {
 
 
@@ -25,7 +34,7 @@ function animate () {
 
     let points = xs.map(x => {
 
-        let y = offset + amplitude*(Math.sin((x / animationWidth/3 * 170))) * Math.sin(((t+x/3) / 20));
+        let y = (offset) + ampFactor(amplitude)*(Math.sin((x / animationWidth/3 * 170))) * Math.sin(((t+x/3) / 20));
         return [x,y]
     })
 
@@ -35,7 +44,7 @@ function animate () {
 
     document.querySelector('path').setAttribute('d', path);
 
-    t += 0.5;
+    t += 0.05;
     requestAnimationFrame(animate)
 }
 
