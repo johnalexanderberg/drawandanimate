@@ -10,15 +10,16 @@ svg {
 }
 
 path {
-    stroke: #25b9d4;
+    stroke: #8AEDEF;
     stroke-width: 6px;
     stroke-linecap: round;
     fill: none;
 }
 
 h1{
-    color: rgb(37, 185, 212);
-    font-size: 4rem;
+    color: rgb(138, 237, 239);
+    font-size: 3.2rem;
+    font-weight: normal;
     letter-spacing: 1px;
 
 }
@@ -35,7 +36,7 @@ h1{
     margin-right: auto;
 
     max-width: 800px;
-    background-color: #dcdcdc;
+    background-color: #595959;
     border-radius: 5px;
     padding: 0 1rem 0 1rem;
     display: flex;
