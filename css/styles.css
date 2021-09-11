@@ -11,11 +11,10 @@ body{
     padding: 2rem;
     font-family: 'Urbanist', sans-serif;
     background-color: var(--color-white);
-    height: 200vh;
 }
 
 svg {
-    width: 100vw;
+    width: 800px;
 }
 
 path {
