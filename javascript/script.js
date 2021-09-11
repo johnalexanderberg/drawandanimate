@@ -1,10 +1,12 @@
+//parameters
 const svgMaxWidth = 800;
 const xPoints = [];
-const amplitude = 20;
+const amplitude = 16;
 const padding = 5;
 const offset = amplitude+padding;
+const animationSpeed = 0.3;
 
-//this is to set the svg height to match the animated wave amplitude.
+//this is to set the svg height to match the wave amplitude.
 document.querySelector('svg').setAttribute("height", `${amplitude*2+(padding*2)}px`);
 
 for (let i = 0; i <= svgMaxWidth; i++) {
@@ -14,11 +16,9 @@ for (let i = 0; i <= svgMaxWidth; i++) {
 
 let time = 0;
 
-
-
 function animate () {
 
-    //map out sinewave points
+    //fill array with sine wave points
     let points = xPoints.map(x => {
 
         let y = sineWave(x,amplitude, 20, time, window.innerWidth);
@@ -30,11 +30,11 @@ function animate () {
         return p[0] + "," +p[1]
     }).join("L");
 
-    //apply to svg
+    //apply new shape to svg
     document.querySelector('.slink__animation').setAttribute('d', path);
 
     //speed of animation
-    time += 0.3 * distance;
+    time += animationSpeed * (distance+1);
 
     //call this function before next frame update
     requestAnimationFrame(animate)

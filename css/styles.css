@@ -1,5 +1,5 @@
 :root {
-    --color-primary: black;
+    --color-primary: #000000;
 }
 
 * {
@@ -68,7 +68,7 @@ h1{
 }
 
 .header {
-    margin: 5px 0 5px 0;
+    margin: 5px 0 5px 5px;
     position: relative;
     align-self: center;
     right: 0;
