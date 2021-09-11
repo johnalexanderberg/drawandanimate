@@ -1,10 +1,10 @@
 //parameters
 const svgMaxWidth = 800;
 const xPoints = [];
-const amplitude = 16;
+const amplitude = 20;
 const padding = 5;
 const offset = amplitude+padding;
-const animationSpeed = 0.3;
+const animationSpeed = 0.2;
 
 //this is to set the svg height to match the wave amplitude.
 document.querySelector('svg').setAttribute("height", `${amplitude*2+(padding*2)}px`);
@@ -34,7 +34,7 @@ function animate () {
     document.querySelector('.slink__animation').setAttribute('d', path);
 
     //speed of animation
-    time += animationSpeed * (distance+1);
+    time += animationSpeed * (distance+0.5);
 
     //call this function before next frame update
     requestAnimationFrame(animate)

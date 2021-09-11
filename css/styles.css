@@ -1,5 +1,6 @@
 :root {
-    --color-primary: #000000;
+    --color-primary: rgb(106, 73, 255);
+    --color-white: #e7e7df;
 }
 
 * {
@@ -7,9 +8,9 @@
 }
 
 body{
-    padding: 1rem;
+    padding: 2rem;
     font-family: 'Urbanist', sans-serif;
-    background-color: #ffffff;
+    background-color: var(--color-white);
     height: 200vh;
 }
 
@@ -33,18 +34,23 @@ path {
 }
 @media screen and (min-width: 730px){
     path {
-        stroke-width: 6px;
+        stroke-width: 5px;
         stroke-linecap: round;
         fill: none;
     }
 }
 
 h1{
-    color: var(--color-primary);
+    color: var(--color-white);
+    padding-left: 10px;
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: -1px;
 
+}
+
+header {
+    font-size: 2rem;
 }
 
 @media screen and (min-width: 450px){
@@ -59,9 +65,7 @@ h1{
 
 @media screen and (min-width: 730px){
     h1{
-
         font-size: 3.5rem;
-        font-weight: 600;
         letter-spacing: 1px;
 
     }
@@ -69,11 +73,20 @@ h1{
 
 .header {
     margin: 5px 0 5px 5px;
-    position: relative;
+    background-color: var(--color-primary);
+    position: absolute;
     align-self: center;
-    right: 0;
     padding: 0;
+}
 
+.header--right {
+
+    right: 0;
+}
+
+.header--left {
+
+    left: 0;
 }
 
 .slink__wrapper {

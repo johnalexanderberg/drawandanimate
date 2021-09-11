@@ -25,8 +25,12 @@ const handleMove = ({ clientX, clientY }) => {
     distance = (easing(calculateDistance([clientX, clientY])));
 };
 
+const handleTouch = ({ touches }) => {
+    distance = (easing(calculateDistance([touches[0].clientX, touches[0].clientY])));
+};
+
 container.addEventListener("mousemove", handleMove);
-container.addEventListener("touchmove", handleMove);
+container.addEventListener("touchmove", handleTouch);
 
 
 
