@@ -1,12 +1,13 @@
 const pi = Math.PI;
-const easing = (num) => Math.pow(num, 3);
+
 const container = document.querySelector('body');
 let distance = 1;
+const easing = (num) => Math.pow(num, 1.5);
 
-
+//returns y point of wave
 function sineWave(x, amplitude, period, time){
 const windowWidthFactor = window.innerWidth/1000 + 1;
-    return amplitude*Math.cos(x*windowWidthFactor/20*(distance*0.3+0.1)) * Math.sin((x+time) * (pi/period))
+    return amplitude*Math.cos(x*windowWidthFactor/20*(easing(distance)*0.3+0.1)) * Math.sin((x+time) * (pi/period))
 }
 
 // outputs distance from center, range 0-1
