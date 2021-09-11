@@ -1,3 +1,11 @@
+:root {
+    --color-primary: black;
+}
+
+* {
+    margin: 0;
+}
+
 body{
     padding: 1rem;
     font-family: 'Urbanist', sans-serif;
@@ -7,18 +15,17 @@ body{
 
 svg {
     width: 100vw;
-    height: 100px;
 }
 
 path {
-    stroke: #8AEDEF;
+    stroke: var(--color-primary);
     stroke-width: 3px;
     stroke-linecap: round;
     fill: none;
 }
 @media screen and (min-width: 450px){
     path {
-        stroke: #8AEDEF;
+        stroke: var(--color-primary);
         stroke-width: 4px;
         stroke-linecap: round;
         fill: none;
@@ -26,7 +33,6 @@ path {
 }
 @media screen and (min-width: 730px){
     path {
-        stroke: #8AEDEF;
         stroke-width: 6px;
         stroke-linecap: round;
         fill: none;
@@ -34,8 +40,7 @@ path {
 }
 
 h1{
-    color: rgb(138, 237, 239);
-
+    color: var(--color-primary);
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: -1px;
@@ -63,6 +68,7 @@ h1{
 }
 
 .header {
+    margin: 5px 0 5px 0;
     position: relative;
     align-self: center;
     right: 0;
@@ -76,7 +82,7 @@ h1{
     margin-right: auto;
     max-width: 800px;
     min-width: 120px;
-    background-color: #595959;
+    background-color: rgba(89, 89, 89, 0);
     border-radius: 5px;
     padding: 0 1rem 0 1rem;
     display: flex;
