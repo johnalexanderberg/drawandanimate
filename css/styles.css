@@ -1,17 +1,24 @@
 :root {
     --color-primary: rgb(106, 73, 255);
     --color-white: #e7e7df;
+    --color-black: #212020;
 }
 
 * {
     margin: 0;
 }
 
-body{
+body {
     padding: 2rem;
     font-family: 'Urbanist', sans-serif;
     background-color: var(--color-white);
     height: 100vh;
+}
+
+.grid {
+    display: grid;
+    grid-template:
+    "A B C" / 1fr 1fr
 }
 
 svg {
@@ -24,7 +31,8 @@ path {
     stroke-linecap: round;
     fill: none;
 }
-@media screen and (min-width: 450px){
+
+@media screen and (min-width: 450px) {
     path {
         stroke: var(--color-primary);
         stroke-width: 4px;
@@ -32,7 +40,8 @@ path {
         fill: none;
     }
 }
-@media screen and (min-width: 730px){
+
+@media screen and (min-width: 730px) {
     path {
         stroke-width: 5px;
         stroke-linecap: round;
@@ -40,9 +49,8 @@ path {
     }
 }
 
-h1{
+h1 {
     color: var(--color-white);
-    padding-left: 10px;
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: -1px;
@@ -53,8 +61,8 @@ header {
     font-size: 2rem;
 }
 
-@media screen and (min-width: 450px){
-    h1{
+@media screen and (min-width: 450px) {
+    h1 {
 
         font-size: 3rem;
         font-weight: 500;
@@ -63,28 +71,28 @@ header {
     }
 }
 
-@media screen and (min-width: 730px){
-    h1{
+@media screen and (min-width: 730px) {
+    h1 {
         font-size: 3.5rem;
         letter-spacing: 1px;
 
     }
 }
 
-.header {
-    margin: 5px 0 5px 5px;
+.banner__header {
+    margin: 2px 0 2px 0px;
     background-color: var(--color-primary);
     position: absolute;
     align-self: center;
     padding: 0;
 }
 
-.header--right {
+.banner__header--right {
 
     right: 0;
 }
 
-.header--left {
+.banner__header--left {
 
     left: 0;
 }
@@ -102,3 +110,78 @@ header {
     justify-content: left;
     align-items: center;
 }
+
+/* Lists */
+
+.list {
+    padding-top: 1rem;
+    list-style: none;
+    color: var(--color-black);
+}
+
+.list--inline .list__item {
+    display: inline;
+    margin-right: 2rem;
+}
+
+.list--icon {
+    padding-left: 3rem;
+    /* Color of icon is set in the svg itself */
+    list-style-image: url(../images/done_black_24dp2.svg);
+    fill: var(--color-primary);
+}
+
+.list--icon .list__item {
+    padding-left: 1rem;
+}
+
+/* Cards */
+.card {
+    box-shadow: 0 0 20px 10px rgba(89, 88, 88, 0.15);
+    /* Because header color was covering the border radius*/
+    overflow: hidden;
+    padding-bottom: 2rem;
+
+}
+
+.card__container {
+    margin-top: 2rem;
+    width: 320px;
+}
+
+.card__header {
+    text-transform: uppercase;
+}
+
+.card__header, .card__body {
+    padding: 1rem 1rem;
+}
+
+.card--primary .card__header {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+
+#a  {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    grid-area: A;
+}
+
+#a  {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    grid-area: B;
+}
+
+#a  {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    grid-area: C;
+}
+
+
